@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --font-main: 'Ubuntu', sans-serif;
+}
+
+* {
+  font-family: var(--font-main)
+}
+
 .Navi {
   background-color: #333333;
 }
@@ -6,9 +16,22 @@
   padding: 0.5em 2em;
   color: white;
   opacity: 70%;
+  transition: opacity 0.5s;
 }
 
 .nav-item:hover {
   opacity: 100%;
-  transition: opacity .5s;
+}
+
+.skills-div {
+  height: 80px;
+}
+
+.skills-img {
+  height: 90%;
+  transition: height 0.5s;
+}
+
+.skills-img:hover {
+  height: 100%;
 }
