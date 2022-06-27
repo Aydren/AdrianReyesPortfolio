@@ -25,7 +25,7 @@ function Skills() {
   });
 
   return (
-    <div className="py-4 my-4">
+    <div className="my-4">
       <h1>Skills</h1>
       <div className="skills-div d-flex justify-content-between">{skills}</div>
     </div>

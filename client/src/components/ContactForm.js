@@ -3,14 +3,19 @@ import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
-const EMAILJS_SERVICE_ID = "service_a6rr2xc";
-const EMAILJS_TEMPLATE_ID = "template_3gykrlr";
-const EMAILJS_PUBLIC_KEY = "osLjlYiwnI6BedNRF";
+import Spinner from "react-bootstrap/Spinner";
+
+const EMAILJS_SERVICE_ID = "service_a6rr2xc1111";
+const EMAILJS_TEMPLATE_ID = "template_3gykrlr1111";
+const EMAILJS_PUBLIC_KEY = "osLjlYiwnI6BedNRF1111";
 
 function ContactForm() {
   const [message, setMessage] = useState("");
+  const [load, setLoad] = useState(false);
 
   const sendEmail = e => {
+    setMessage("");
+    setLoad(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -22,13 +27,16 @@ function ContactForm() {
       .then(
         result => {
           console.log(result.text);
+          setLoad(false);
           setMessage("Your email has been sent! Thank you for reaching out!");
         },
         error => {
           console.log(error.text);
+          setLoad(false);
+          setMessage("Your email has has not been sent. Please try again.");
         }
       );
-      e.target.reset()
+    e.target.reset();
   };
 
   return (
@@ -39,9 +47,15 @@ function ContactForm() {
             {message}
           </Alert>
         )}
+        {load === false ? null : (
+          <Spinner animation="border" role="status" id="spinner">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        )}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control
+            aria-label="Name input section"
             type="text"
             placeholder="Enter name"
             name="name"
@@ -53,6 +67,7 @@ function ContactForm() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            aria-label="Email input section"
             type="email"
             placeholder="Enter email"
             name="email"
@@ -63,14 +78,21 @@ function ContactForm() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Message</Form.Label>
           <Form.Control
-            type="text"
+            aria-label="Message input section"
+            as="textarea"
+            rows={5}
             placeholder="Enter message"
             name="message"
             required="true"
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="m-auto w-25">
+        <Button
+          aria-label="Submit Button"
+          variant="primary"
+          type="submit"
+          className="m-auto w-25"
+        >
           Submit
         </Button>
       </Form>

@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
-  --font-main: 'Ubuntu', sans-serif;
+  --font-main: "Ubuntu", sans-serif;
 }
 
 * {
-  font-family: var(--font-main)
+  font-family: var(--font-main);
+}
+
+li > a {
+  color: black;
+  opacity: 70%;
+  transition: all 1s;
+}
+
+li > a:hover {
+  color: purple;
+  opacity: 100%;
 }
 
 .Navi {
   background-color: #333333;
-}
-
-.nav-item {
-  padding: 0.5em 2em;
-  color: white;
-  opacity: 70%;
-  transition: opacity 0.5s;
-}
-
-.nav-item:hover {
-  opacity: 100%;
 }
 
 .skills-div {
@@ -28,10 +28,73 @@
 }
 
 .skills-img {
+  max-height: 90px;
   height: 90%;
   transition: height 0.5s;
 }
 
 .skills-img:hover {
   height: 100%;
+}
+
+#spinner{
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.bio {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#bio-text::after {
+  content: ' Your next Developer';
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
