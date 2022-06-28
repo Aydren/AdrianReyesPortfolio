@@ -40,16 +40,14 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div className="my-4">
       <Form onSubmit={sendEmail} className="d-flex flex-column">
         {message === "" ? null : (
           <Alert variant="info" className="m-auto">
             {message}
           </Alert>
         )}
-        {load === false ? null : (
-          <LoadSpinner />
-        )}
+        {load === false ? null : <LoadSpinner />}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control

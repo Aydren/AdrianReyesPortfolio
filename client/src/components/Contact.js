@@ -12,7 +12,7 @@ function Contact() {
     setButton(false);
   }
   return (
-    <div className="my-4 d-flex flex-column">
+    <div className="mb-4 d-flex flex-column">
       <Socials />
       <div className="m-auto">
         <h4 className="my-3">Have a question or want to work together?</h4>
