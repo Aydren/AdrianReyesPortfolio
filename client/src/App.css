@@ -8,6 +8,11 @@
   font-family: var(--font-main);
 }
 
+section {
+  padding-top: 3.5em;
+}
+
+/* Socials.js */
 li > a {
   color: black;
   opacity: 70%;
@@ -19,16 +24,17 @@ li > a:hover {
   opacity: 100%;
 }
 
+/* NavBar.js */
 .Navi {
   background-color: #333333;
 }
 
+/* Skills.js */
 .skills-div {
   height: 80px;
 }
 
 .skills-img {
-  max-height: 90px;
   height: 90%;
   transition: height 0.5s;
 }
@@ -37,24 +43,23 @@ li > a:hover {
   height: 100%;
 }
 
-#spinner{
+/* LoadSpinner.js */
+#spinner {
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
 }
 
+/* Bio.js */
 .bio {
   width: 100%;
   min-height: 100vh;
 }
 
 #bio-text::after {
-  content: ' Your next Developer';
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
+  content: "\AYour next Developer";
+  white-space: pre-wrap;
   animation: fadein 3s;
 }
 

@@ -4,8 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 
 function NavBar() {
   return (
-      <Navbar className="Navi position-sticky" variant="dark">
-        <Nav className="justify-content-center w-100" activeKey="/home">
+      <Navbar className="Navi fixed-top top-0" variant="dark">
+        <Nav className="justify-content-center w-100">
           <Nav.Item className="mx-2">
             <Nav.Link href="#skills">Skills</Nav.Link>
           </Nav.Item>

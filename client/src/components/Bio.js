@@ -1,12 +1,12 @@
 function Bio() {
   return (
-    <div className="d-flex justify-content-center bio">
+    <div className="d-flex justify-content-center bio flex-wrap">
       <img
         src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
-        width={300}
-        height={300}
-        alt="photograph of Me"
-        className="align-self-center m-3"
+        width={400}
+        height={400}
+        alt="photograph of myself"
+        className="align-self-center mx-3"
       />
       <div className="d-flex flex-column my-3 justify-content-center">
         <h2 id="bio-text">

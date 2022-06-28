@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
-import Spinner from "react-bootstrap/Spinner";
+import LoadSpinner from "./LoadSpinner";
 
 const EMAILJS_SERVICE_ID = "service_a6rr2xc1111";
 const EMAILJS_TEMPLATE_ID = "template_3gykrlr1111";
@@ -33,14 +33,14 @@ function ContactForm() {
         error => {
           console.log(error.text);
           setLoad(false);
-          setMessage("Your email has has not been sent. Please try again.");
+          setMessage("Your email was not sent. Please try again.");
         }
       );
     e.target.reset();
   };
 
   return (
-    <div className="my-4">
+    <div>
       <Form onSubmit={sendEmail} className="d-flex flex-column">
         {message === "" ? null : (
           <Alert variant="info" className="m-auto">
@@ -48,9 +48,7 @@ function ContactForm() {
           </Alert>
         )}
         {load === false ? null : (
-          <Spinner animation="border" role="status" id="spinner">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <LoadSpinner />
         )}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>

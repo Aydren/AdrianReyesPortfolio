@@ -11,22 +11,19 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className="px-5 mx-5">
+      <div className="container">
         <section>
           <Bio />
         </section>
         <section id="skills">
           <Skills />
         </section>
-        <hr />
         <section id="projects">
           <Projects />
         </section>
-        <hr />
         <section id="about-me">
           <AboutMe />
         </section>
-        <hr />
         <section id="contact">
           <Contact />
         </section>
