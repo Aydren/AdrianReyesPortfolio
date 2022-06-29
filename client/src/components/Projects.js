@@ -1,13 +1,31 @@
+import { projectList } from "./ProjectData";
+
 function Projects() {
+  let projectsMap = projectList.map(project => {
     return (
-      <div>
-        <h1>Projects</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div
+        key={project.name}
+        className="project-list d-flex flex-row justify-content-around align-items-center my-1 border border-start-0 rounded-end"
+      >
+        <div className="w-25 px-2">
+          <h1>{project.name}</h1>
+          <div className="d-flex justify-content-between">
+            <p>{project.github}</p>
+            <p>{project.site}</p>
+          </div>
+        </div>
+        <p className="w-50 px-2">{project.description}</p>
+        <img src={project.img} alt="logo" className="h-75 rounded" />
       </div>
     );
-  }
-  
-  export default Projects;
-  
+  });
+
+  return (
+    <div>
+      <h1>Projects</h1>
+      <div>{projectsMap}</div>
+    </div>
+  );
+}
+
+export default Projects;

@@ -4,10 +4,12 @@
   --font-main: "Ubuntu", sans-serif;
 }
 
+/* all */
 * {
   font-family: var(--font-main);
 }
 
+/* only section tags */
 section {
   padding-top: 3.5em;
 }
@@ -24,9 +26,15 @@ li > a:hover {
   opacity: 100%;
 }
 
+/* Projects.js */
+.project-list{
+height: 25vh;
+}
+
 /* NavBar.js */
 .Navi {
   background-color: #333333;
+  height: 6vh;
 }
 
 /* Skills.js */
@@ -54,12 +62,10 @@ li > a:hover {
 /* Bio.js */
 .bio {
   width: 100%;
-  min-height: 100vh;
+  min-height: 94vh;
 }
 
-#bio-text::after {
-  content: "\AYour next Developer";
-  white-space: pre-wrap;
+#h2-animation {
   animation: fadein 3s;
 }
 
