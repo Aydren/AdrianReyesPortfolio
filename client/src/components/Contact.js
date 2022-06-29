@@ -13,10 +13,7 @@ function Contact() {
   }
   return (
     <div className="mb-4 d-flex flex-column">
-      <Socials />
-      <div className="m-auto">
-        <h4 className="my-3">Have a question or want to work together?</h4>
-      </div>
+      <h4 className="m-auto my-2">Have a question or want to work together?</h4>
       {button !== false ? (
         <Button variant="success" onClick={handleClick} className="m-auto w-25">
           Contact Me
