@@ -4,7 +4,10 @@ import Navbar from "react-bootstrap/Navbar";
 
 function NavBar() {
   return (
-      <Navbar className="Navi fixed-top top-0" variant="dark">
+    <Navbar className="Navi fixed-top top-0" variant="dark" expand="sm">
+      <Navbar.Brand href="" className="ms-3">Adrian Reyes</Navbar.Brand>
+      <Navbar.Toggle aria-controls="Navigation toggle" />
+      <Navbar.Collapse>
         <Nav className="justify-content-center w-100">
           <Nav.Item className="mx-2">
             <Nav.Link href="#skills">Skills</Nav.Link>
@@ -22,7 +25,8 @@ function NavBar() {
             <Nav.Link href="#resume">Resume</Nav.Link>
           </Nav.Item>
         </Nav>
-      </Navbar>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
 
