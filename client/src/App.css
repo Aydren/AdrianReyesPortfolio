@@ -27,8 +27,12 @@ li > a:hover {
 }
 
 /* Projects.js */
-.project-list{
-height: 25vh;
+.project-list > img{
+min-height: 25vh;
+}
+
+.project-image{
+  max-width: 230px;
 }
 
 /* NavBar.js */
