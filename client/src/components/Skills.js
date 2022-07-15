@@ -1,4 +1,5 @@
 import { logos } from "./SkillsData";
+import Chart from "./Chart";
 
 function Skills() {
   let skillsMap = logos.map(logo => {
@@ -16,6 +17,7 @@ function Skills() {
   return (
     <div>
       <h1>Skills</h1>
+      <Chart />
       <div className="d-flex justify-content-around flex-wrap">{skillsMap}</div>
     </div>
   );

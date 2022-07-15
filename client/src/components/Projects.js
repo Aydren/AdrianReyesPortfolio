@@ -2,7 +2,6 @@ import { projectList } from "./ProjectData";
 
 function Projects() {
   let projectsMap = projectList.map(project => {
-    /* d-flex flex-row justify-content-around align-items-center my-1 border border-start-0 rounded-end */
     return (
       <div
         key={project.name}
@@ -10,7 +9,7 @@ function Projects() {
       >
         <div className="w-25 px-2">
           <h1>{project.name}</h1>
-          <div className="d-flex justify-content-between">
+          <div className="d-flex flex-column justify-content-between">
             <p>{project.github}</p>
             <p>{project.site}</p>
           </div>

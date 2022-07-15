@@ -32,4 +32,11 @@ function App() {
   );
 }
 
+/* <BrowserRouter>
+    <Routes>
+    <Route path="/resume" element={<Resume />} />
+    </Routes>
+    </BrowserRouter>
+ */
+
 export default App;

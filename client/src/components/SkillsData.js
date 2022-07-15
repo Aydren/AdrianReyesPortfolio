@@ -6,10 +6,10 @@ import Javascript from "../assets/Javascript.svg";
 import Python from "../assets/Python.svg";
 
 export let logos = [
-  { img: html5Logo, level: "Proficent" },
-  { img: cssLogo, level: "Proficent" },
-  { img: Javascript, level: "Proficent" },
-  { img: reactLogo, level: "Proficent" },
-  { img: MongoDB, level: "Novice - Proficent" },
+  { img: html5Logo, level: "Proficient" },
+  { img: cssLogo, level: "Proficient" },
+  { img: Javascript, level: "Proficient" },
+  { img: reactLogo, level: "Proficient" },
+  { img: MongoDB, level: "Novice - Proficient" },
   { img: Python, level: "Novice" },
 ];
