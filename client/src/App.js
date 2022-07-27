@@ -9,25 +9,23 @@ import AboutMe from "./components/AboutMe";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NavBar />
-      <div className="container">
-        <section>
-          <Bio />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="about-me">
-          <AboutMe />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </div>
+      <section id="bio">
+        <Bio />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about-me">
+        <AboutMe />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 }

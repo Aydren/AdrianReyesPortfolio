@@ -1,5 +1,5 @@
 import { logos } from "./SkillsData";
-import Chart from "./Chart";
+import RadarChart from "./RadarChart";
 
 function Skills() {
   let skillsMap = logos.map(logo => {
@@ -15,10 +15,10 @@ function Skills() {
   });
 
   return (
-    <div>
+    <div id="skills-section">
       <h1>Skills</h1>
-      <Chart />
-      <div className="d-flex justify-content-around flex-wrap">{skillsMap}</div>
+      <RadarChart />
+      <div className="skills-map d-flex justify-content-around flex-wrap">{skillsMap}</div>
     </div>
   );
 }

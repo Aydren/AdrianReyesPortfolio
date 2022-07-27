@@ -56,7 +56,7 @@ function ContactForm() {
             placeholder="Enter name"
             name="name"
             autoFocus
-            required="true"
+            required={true}
           />
         </Form.Group>
 
@@ -67,7 +67,7 @@ function ContactForm() {
             type="email"
             placeholder="Enter email"
             name="email"
-            required="true"
+            required={true}
           />
         </Form.Group>
 
@@ -79,7 +79,7 @@ function ContactForm() {
             rows={5}
             placeholder="Enter message"
             name="message"
-            required="true"
+            required={true}
           />
         </Form.Group>
 
