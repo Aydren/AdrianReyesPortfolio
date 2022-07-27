@@ -27,7 +27,7 @@ function Projects() {
   return (
     <div>
       <h1>Projects</h1>
-      <div className="d-flex justify-content-around flex-wrap">
+      <div className="projects-map d-flex justify-content-around flex-wrap">
         {projectsMap}
       </div>
     </div>
