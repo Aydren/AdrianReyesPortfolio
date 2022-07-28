@@ -47,7 +47,7 @@ const options = {
 
 function RadarChart() {
   return (
-    <div id="chart-data" className="m-auto my-4">
+    <div id="chart-data" className="m-auto">
       <Radar data={data} options={options} />
     </div>
   );

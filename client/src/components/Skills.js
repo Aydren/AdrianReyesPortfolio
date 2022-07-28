@@ -15,10 +15,14 @@ function Skills() {
   });
 
   return (
-    <div id="skills-section">
+    <div>
       <h1>Skills</h1>
-      <RadarChart />
-      <div className="skills-map d-flex justify-content-around flex-wrap">{skillsMap}</div>
+      <div className="d-flex flex-wrap">
+        <RadarChart />
+        <div className="skills-map d-flex flex-column-md justify-content-around flex-wrap">
+          {skillsMap}
+        </div>
+      </div>
     </div>
   );
 }
